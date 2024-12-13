@@ -21,20 +21,24 @@ function ShowMenu() {
   ];
 
   const menuContainer = document.createElement("div");
+  menuContainer.classList.add("menu-container");
 
   const starterContainer = document.createElement("div");
+  starterContainer.classList.add("starter-container");
   const starterHeading = document.createElement("h2");
   starterHeading.textContent = "Starters";
   const starterList = document.createElement("ul");
   starterContainer.append(starterHeading, starterList);
 
   const mainDishContainer = document.createElement("div");
+  mainDishContainer.classList.add("main-dish-container");
   const mainDishHeading = document.createElement("h2");
   mainDishHeading.textContent = "Main Dishes";
   const mainDishList = document.createElement("ul");
   mainDishContainer.append(mainDishHeading, mainDishList);
 
   const dessertContainer = document.createElement("div");
+  dessertContainer.classList.add("dessert-container");
   const dessertHeading = document.createElement("h2");
   dessertHeading.textContent = "Desserts";
   const dessertList = document.createElement("ul");
@@ -52,13 +56,13 @@ function ShowMenu() {
     description.textContent = dish.description;
     switch (dish.category) {
       case "starter":
-        starterContainer.append(name, price, description);
+        starterList.append(name, price, description);
         break;
       case "mainDish":
-        mainDishContainer.append(name, price, description);
+        mainDishList.append(name, price, description);
         break;
       case "dessert":
-        dessertContainer.append(name, price, description);
+        dessertList.append(name, price, description);
         break;
     }
   });

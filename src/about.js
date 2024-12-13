@@ -4,7 +4,11 @@ function ShowAbout() {
   const aboutHeading = document.createElement("h1");
   aboutHeading.textContent = "About";
 
-  aboutContainer.append(aboutHeading);
+  const aboutContent = document.createElement("p");
+  aboutContent.textContent = `Restaurant TROCADERO
+    deutsch-mediterrane und saisonbezogene Küche`;
+
+  aboutContainer.append(aboutHeading, aboutContent);
 
   document.querySelector("#content").append(aboutContainer);
 }
