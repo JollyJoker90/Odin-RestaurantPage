@@ -1,0 +1,51 @@
+:root {
+  --background: #77cbff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+html {
+  background-color: white;
+}
+
+body {
+  background-color: var(--background);
+  margin: 0 10vw;
+  padding-top: 24px;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 24px;
+
+  button {
+    padding: 8px 20px;
+    border: 2px solid var(--background);
+    border-radius: 4px;
+  }
+
+  button:hover {
+    background-color: var(--background);
+    border: 2px solid white;
+    box-sizing: border-box;
+  }
+}
+
+#content > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.flex {
+  display: flex;
+}
